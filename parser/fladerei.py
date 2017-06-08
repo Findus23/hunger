@@ -16,6 +16,7 @@ def fetch_recourse():
         from website import fladerei_html as html
     else:
         r = requests.get(fetch_url)
+        r.encoding = "utf-8"  # force UTF-8 as the meta tag is invalid
         html = r.text
     return html
 
@@ -40,7 +41,7 @@ def get_menus():
         date = datetime.strptime(datestring, "%d.%m.").replace(year=datetime.today().year)
         tagesflade = {
             "date": date.strftime("%Y-%m-%d"),
-            "description": descr
+            "name": descr
         }
         tagesfladen.append(tagesflade)
         i += 2
