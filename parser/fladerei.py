@@ -4,7 +4,7 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 
-DEBUG = False
+import config
 
 name = "Fladerei"
 
@@ -12,7 +12,7 @@ fetch_url = "https://www.fladerei.com/dyn_inhalte/berggasse/tagesfladen_berggass
 
 
 def fetch_recourse():
-    if DEBUG:
+    if config.DEBUG:
         from website import fladerei_html as html
     else:
         r = requests.get(fetch_url)

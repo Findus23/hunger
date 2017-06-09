@@ -14,8 +14,8 @@ connection = pymysql.connect(host=config.host,
                              password=config.password,
                              db=config.db,
                              charset='utf8mb4',
-                             cursorclass=pymysql.cursors.DictCursor)
-
+                             cursorclass=pymysql.cursors.DictCursor,
+                             unix_socket='/var/run/mysqld/mysqld.sock')
 
 @app.route('/venue/')
 def get_venues():

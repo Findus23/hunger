@@ -5,7 +5,7 @@ from pprint import pprint
 import requests
 from bs4 import BeautifulSoup
 
-DEBUG = False
+import config
 
 name = "Zuppa"
 
@@ -15,7 +15,7 @@ dateregex = re.compile("(\d+\.\d+\.\d{4})")
 
 
 def fetch_recourse():
-    if DEBUG:
+    if config.DEGUB:
         from website import zuppa_html as html
     else:
         r = requests.get(fetch_url)
@@ -44,6 +44,7 @@ def get_menus():
             day_p = p  # findNext should find the second mea
             tagesmenus.append(tagesflade)
     return tagesmenus
+
 
 def get_hauptsachen(soup):
     divs = soup.findAll("div", {"class": "menue_box"})
