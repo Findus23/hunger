@@ -18,7 +18,7 @@ connection = pymysql.connect(host=config.host,
                              unix_socket='/var/run/mysqld/mysqld.sock')
 
 
-@app.route('/venue/')
+@app.route('/api/venue/')
 def get_venues():
     with connection.cursor() as cursor:
         sql = "SELECT * FROM venues"
@@ -30,7 +30,7 @@ def get_venues():
         return jsonify(venues)
 
 
-@app.route('/venue/<int:venueid>/')
+@app.route('/api/venue/<int:venueid>/')
 def get_meals(venueid):
     with connection.cursor() as cursor:
         print("GFGDGDG")
