@@ -40,7 +40,7 @@ def get_menus():
             descr += " " + extradescr
         date = datetime.strptime(datestring, "%d.%m.").replace(year=datetime.today().year)
         tagesflade = {
-            "date": date.strftime("%Y-%m-%d"),
+            "date": date.isoformat(),
             "name": descr
         }
         tagesfladen.append(tagesflade)

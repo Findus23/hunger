@@ -1,14 +1,13 @@
-import json
-
 import pymysql.cursors
 
+import config
 import parser
 
 # Connect to the database
-connection = pymysql.connect(host='localhost',
-                             user='root',
-                             password='Findus',
-                             db='hunger',
+connection = pymysql.connect(host=config.host,
+                             user=config.user,
+                             password=config.password,
+                             db=config.db,
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
 

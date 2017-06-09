@@ -15,7 +15,7 @@ create table menus
 	venue int not null,
 	meal int not null,
 	constraint eindeutig
-		unique (venue, date),
+		unique (venue, date, meal),
 	constraint menus_meals_id_fk
 		foreign key (meal) references hunger.meals (id)
 )

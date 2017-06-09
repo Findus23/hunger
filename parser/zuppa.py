@@ -38,7 +38,7 @@ def get_menus():
                 if not any(str.isdigit(c) for c in strong.text):
                     title.append(strong.text.strip())
             tagesflade = {
-                "date": date.strftime("%Y-%m-%d"),
+                "date": date.isoformat(),
                 "name": " ".join(title).replace("\n", " ")
             }
             day_p = p  # findNext should find the second mea
