@@ -15,7 +15,7 @@ dateregex = re.compile("(\d+\.\d+\.\d{4})")
 
 
 def fetch_recourse():
-    if config.DEGUB:
+    if config.DEBUG:
         from website import zuppa_html as html
     else:
         r = requests.get(fetch_url)
