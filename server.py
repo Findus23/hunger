@@ -17,6 +17,7 @@ connection = pymysql.connect(host=config.host,
                              cursorclass=pymysql.cursors.DictCursor,
                              unix_socket='/var/run/mysqld/mysqld.sock')
 
+
 @app.route('/venue/')
 def get_venues():
     with connection.cursor() as cursor:
@@ -32,6 +33,7 @@ def get_venues():
 @app.route('/venue/<int:venueid>/')
 def get_meals(venueid):
     with connection.cursor() as cursor:
+        print("GFGDGDG")
         select = request.args.get("select")
         if not select or select == "week":
             sql_range = " AND YEARWEEK(date, 1) = YEARWEEK(CURDATE(), 1)"
@@ -45,6 +47,8 @@ FROM menus
 WHERE venue = %s"""
         cursor.execute(sql + sql_range, venueid)
         menues = cursor.fetchall()
+        for menu in menues:
+            menu["date"] = menu["date"].isoformat()
         return jsonify(menues)
 
 
@@ -53,19 +57,5 @@ def redirect_to_correct_api():
     return redirect(url_for("get_venues"))
 
 
-class CustomJSONEncoder(JSONEncoder):
-    def default(self, obj):
-        try:
-            if isinstance(obj, date):
-                return obj.isoformat()
-            iterable = iter(obj)
-        except TypeError:
-            pass
-        else:
-            return list(iterable)
-        return JSONEncoder
-
-
 if __name__ == "__main__":
-    app.json_encoder = CustomJSONEncoder
-    app.run(host="0.0.0.0", debug=True)
+    app.run(debug=True)
