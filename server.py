@@ -1,6 +1,6 @@
 import logging
 
-from flask import Flask, jsonify, url_for, redirect, request, abort
+from flask import Flask, jsonify, url_for, redirect, abort
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
 
@@ -11,6 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://{user}:{password}@{host
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+
 @app.before_first_request
 def setup_logging():
     if not app.debug:
@@ -18,6 +19,17 @@ def setup_logging():
         app.logger.addHandler(logging.StreamHandler())
         app.logger.setLevel(logging.INFO)
 
+
+@app.errorhandler(404)
+@app.errorhandler(400)
+def handle_invalid_usage(error):
+    response = jsonify({
+        "code": error.code,
+        "name": error.name,
+        "description": error.description
+    })
+    response.status_code = error.code
+    return response
 
 @app.route('/api/venue/')
 def get_venues():
@@ -32,19 +44,20 @@ def get_venues():
 
 
 @app.route('/api/venue/<int:venueid>/')
-def get_meals(venueid):
-    select = request.args.get("select")
-    if not select or select == "week":
-        sql_range = " AND YEARWEEK(date, 1) = YEARWEEK(CURDATE(), 1)"
-    elif select == "today":
-        sql_range = " AND date=CURDATE()"
+@app.route('/api/venue/<int:venueid>/<string:datetype>/')
+@app.route('/api/venue/<int:venueid>/<string:datetype>/<int:timeoffset>/')
+def get_meals(venueid, datetype="week", timeoffset=0):
+    if datetype == "week":
+        sql_range = " AND YEARWEEK(date, 1) = YEARWEEK(CURDATE(), 1) + :offset"
+    elif datetype == "today":
+        sql_range = " AND date=DATE_ADD(CURDATE(), INTERVAL :offset DAY) "
     else:
         return abort(400)
     sql = """SELECT venue, date, name, description
 FROM menus
   JOIN meals ON meals.id = menus.meal
 WHERE venue = :venue"""
-    results = db.engine.execute(text(sql + sql_range), {"venue": venueid}).fetchall()
+    results = db.engine.execute(text(sql + sql_range), {"venue": venueid, "offset": timeoffset}).fetchall()
     menus = []
     for row in results:
         menu = dict(row)
