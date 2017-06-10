@@ -1,4 +1,5 @@
-import pymysql
+import logging
+
 from flask import Flask, jsonify, url_for, redirect, request, abort
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
@@ -9,6 +10,13 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://{user}:{password}@{host}/{db}".format(**config.db)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
+@app.before_first_request
+def setup_logging():
+    if not app.debug:
+        # In production mode, add log handler to sys.stderr.
+        app.logger.addHandler(logging.StreamHandler())
+        app.logger.setLevel(logging.INFO)
 
 
 @app.route('/api/venue/')
