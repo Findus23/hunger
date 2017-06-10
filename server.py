@@ -1,58 +1,51 @@
-from datetime import date
-from pprint import pprint
-
 import pymysql
 from flask import Flask, jsonify, url_for, redirect, request, abort
-from flask.json import JSONEncoder
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import text
 
-app = Flask(__name__)
 import config
 
-# Connect to the database
-connection = pymysql.connect(host=config.host,
-                             user=config.user,
-                             password=config.password,
-                             db=config.db,
-                             charset='utf8mb4',
-                             cursorclass=pymysql.cursors.DictCursor,
-                             unix_socket='/var/run/mysqld/mysqld.sock')
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://{user}:{password}@{host}/{db}".format(**config.db)
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
 
 @app.route('/api/venue/')
 def get_venues():
-    with connection.cursor() as cursor:
-        sql = "SELECT * FROM venues"
-        cursor.execute(sql)
-        venues = cursor.fetchall()
-        for venue in venues:
-            # venue["meals_url"] = url_for("get_meals", venueid=venue["id"])
-            venue["meals_url"] = url_for("get_meals", venueid=venue["id"], _external=True)
-        return jsonify(venues)
+    sql = text("SELECT * FROM venues")
+    results = db.engine.execute(sql).fetchall()
+    venues = []
+    for row in results:
+        venue = dict(row)
+        venue["meals_url"] = url_for("get_meals", venueid=venue["id"], _external=True)
+        venues.append(venue)
+    return jsonify(venues)
 
 
 @app.route('/api/venue/<int:venueid>/')
 def get_meals(venueid):
-    with connection.cursor() as cursor:
-        print("GFGDGDG")
-        select = request.args.get("select")
-        if not select or select == "week":
-            sql_range = " AND YEARWEEK(date, 1) = YEARWEEK(CURDATE(), 1)"
-        elif select == "today":
-            sql_range = " AND date=CURDATE()"
-        else:
-            return abort(400)
-        sql = """SELECT venue, date, name, description
+    select = request.args.get("select")
+    if not select or select == "week":
+        sql_range = " AND YEARWEEK(date, 1) = YEARWEEK(CURDATE(), 1)"
+    elif select == "today":
+        sql_range = " AND date=CURDATE()"
+    else:
+        return abort(400)
+    sql = """SELECT venue, date, name, description
 FROM menus
   JOIN meals ON meals.id = menus.meal
-WHERE venue = %s"""
-        cursor.execute(sql + sql_range, venueid)
-        menues = cursor.fetchall()
-        for menu in menues:
-            menu["date"] = menu["date"].isoformat()
-        return jsonify(menues)
+WHERE venue = :venue"""
+    results = db.engine.execute(text(sql + sql_range), {"venue": venueid}).fetchall()
+    menus = []
+    for row in results:
+        menu = dict(row)
+        menu["date"] = menu["date"].isoformat()
+        menus.append(menu)
+    return jsonify(menus)
 
 
-@app.route("/")
+@app.route("/api/")
 def redirect_to_correct_api():
     return redirect(url_for("get_venues"))
 
