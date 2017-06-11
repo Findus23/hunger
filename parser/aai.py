@@ -27,7 +27,6 @@ def get_menus():
     html = fetch_recourse()
     startdatestring = dateregex.search(html).groups()[0]
     startdate = datetime.strptime(startdatestring, "%d.%m.").replace(year=datetime.today().year)
-    print(startdate)
     soup = BeautifulSoup(html, 'html.parser')
     table = soup.find("table", {"class": "mitrand", "border": "1", "align": "center"})
     i = 0
