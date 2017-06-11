@@ -18,7 +18,7 @@ try:
         check_meal_sql = "SELECT id FROM meals WHERE name=%s"
         insert_meal_sql = "INSERT INTO meals (name) VALUE (%s)"
         insert_sql = 'REPLACE INTO menus (venue, date, meal) VALUES (%s, %s, %s)'
-        for p in [parser.fladerei, parser.zuppa]:
+        for p in [parser.fladerei, parser.zuppa, parser.aai]:
             cursor.execute(venue_sql, p.name)
             venue_id = cursor.fetchone()["id"]
             for i in p.get_menus():

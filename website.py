@@ -507,3 +507,307 @@ gerne auf vorbestellung <strong>4,50</strong></p>
 </body>
 </html>
 """
+aai_html = """
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="de">
+<head>
+<meta http-equiv="Content-Language" content="de-at">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="expires" content="0">
+
+<link REL="STYLESHEET" type="text/css" href="/multi.css">
+<style type="text/css">
+
+body {background-color:#FFF;}
+</style>
+<title>AAI-Mensa Afro Asiatisches Institut in Wien</title>
+<script type="text/javascript" language="javascript"><!--
+function ow(page,pname){
+var opener = window.open(page, pname , "menubar=yes,locationbar=yes,scrollbars=yes,status=yes,personalbar=no,width=400,height=300,screenx=0,screeny=0,resizable=yes,copyhistory=0")
+}
+--></script>
+
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript" src="func.js"></script>
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen">
+
+</head>
+
+<body>
+
+<div id="sp1">
+		<img src="/images/logo240.gif" alt="AFRO ASIATISCHES INSTITUT WIEN, Türkenstraße 3, 1090 Wien, Austria" title="">
+
+	
+<div id="hauptnavi_0">
+<a href="/aktuell" class="navi0">aktuell</a>
+<a href="/wer-wir-sind" class="navi0">WER WIR SIND</a>
+<a href="/unser-angebot" class="navi0">-----------------------</a>
+<a href="/----" class="navi0">-----------------------</a>
+<a href="/raumvermietung" class="navi0">Raumvermietung</a>
+<a href="/sakralraeume1" class="navi0">SAKRALR&#196;UME</a>
+<a href="/studentenhaus" class="navi0">Studentenhaus</a>
+<a href="/mensa-und-cafe-afro" class="navi0a">MENSA</a>
+<a href="/cafe-afro" class="navi0">Cafe afro</a>
+<a href="/--" class="navi0">-----------------------</a>
+<a href="/links1" class="navi0">LINKS</a>
+<a href="/impressum1" class="navi0">Impressum</a>
+</div><!--menuebene 0 -->
+
+		 		
+	<a href="http://www.facebook.com/AAI.Wien" target="_blank"><img src="/images/facebook_findus.png" alt="facebook logo" title="find us on facebook" style="margin:15px 0 0 0;"></a>	
+</div> <!-- sp1 -->
+
+<div id="sp2">
+		<div id="toppic"><img src="/images/spacer.gif" alt="Symbolbild" title=""></div>
+		<img src="/images/wienat.gif" alt="" title="">
+	
+</div> <!-- sp2 -->
+
+
+<div id="sp3">
+	<div id="oben">	
+		
+	</div>
+	<div id="backbut"><a href="javascript:history.go(-1)">... zurück</a>	
+	</div>	
+	<div id="maintext">
+		
+
+<!-- Detail-Layout standard -->
+<div class="beitrag_standard">
+<table width="100%" class="noborder"><tr><td valign="top" width="120">
+<a href="http://www.aai-wien.at/images/gross/aaimensa018-w.jpg" rel="lightbox"><img src="http://www.aai-wien.at/images/klein/aaimensa018-w.jpg" title="" alt="" class="foto"></a>
+</td><td width="10"> </td><td valign="top">
+<h1>AAI-Mensa</h1>
+<div class="intro"><p>&#160;</p>
+
+<div><iframe allowtransparency="" frameborder="0" scrolling="no" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww%2Efacebook%2Ecom%2FAAI%2EWien&#38;layout=button_count&#38;show-faces=false&#38;width=130&#38;action=like&#38;colorscheme=light" style="border: currentColor; border-image: none; width: 130px; height: 30px; overflow: hidden; padding-top: 2px; float: left;"></iframe></div>
+</div>
+</td></tr>
+<tr><td valign="top" width="120"></td><td width="10"> </td><td valign="top">
+<p style="text-align: center;">&#160;</p>
+
+<p style="text-align: center;">&#160;</p>
+
+<p style="text-align: center;"><strong>Men&#252;plan 05.06. &#8211; 09.06.2017</strong></p>
+
+<table align="center" border="1" cellpadding="1" cellspacing="1" class="mitrand" style="width: 200px;">
+	<caption>&#160;</caption>
+	<tbody>
+		<tr>
+			<td>&#160;</td>
+			<td style="text-align: center;">Montag</td>
+			<td style="text-align: center;">Dienstag&#160;</td>
+			<td style="text-align: center;">&#160;Mittwoch</td>
+			<td style="text-align: center;">&#160;Donnerstag</td>
+			<td style="text-align: center;">&#160;Freitag&#160;&#160;&#160;&#160;&#160;</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;">Suppe</td>
+			<td style="text-align: center;">
+			<p>SCH&#214;NEN FEIERTAG</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Minestrone&#160;(ALG)) &#160;&#160;</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Broccolicremesuppe&#160;(GL)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Linsensuppe (L)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Gem&#252;secremesuppe (GL)</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;">Men&#252;1</td>
+			<td style="text-align: center;">
+			<p>SCH&#214;NEN FEIERTAG</p>
+			</td>
+			<td style="text-align: center;">
+			<p>H&#252;hnerspie&#223; mit Pommes&#160;(AL) &#160; &#160;</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Rindsgeschnetzeltes mit Nudeln (ACL)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Wiener Schnitzel mit Erd&#228;pfelsalat(AGC)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Fischteller (ACG)</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;">Men&#252;2</td>
+			<td style="text-align: center;">
+			<p>&#160;</p>
+
+			<p>SCH&#214;NEN FEIERTAG</p>
+
+			<p>&#160;</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Gem&#252;selasagne mit Tomatensauce (ACGL)&#160;</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Gebackener Camembert mit Preiselbeeren und Sauce Tartar&#160;(ACG)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Broccolipfanne mit Basmatireis&#160;(AGL)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Spinat-Mozzarella-Tascherl mit Salat und Joghurtsauce(ACGL)&#160;&#160;</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">&#160;</td>
+			<td valign="top">&#160;</td>
+			<td valign="top">&#160;</td>
+			<td valign="top">&#160;</td>
+			<td valign="top">&#160;</td>
+			<td valign="top">&#160;</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;">
+			<p>&#160;</p>
+
+			<p>Men&#252;3</p>
+
+			<p>&#160;</p>
+
+			<p>&#160;</p>
+			</td>
+			<td style="text-align: center;">
+			<p>SCH&#214;NEN FEIERTAG</p>
+
+			<p>&#160;</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Chili con carne mit Basmatireis (L)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Huhn s&#252;&#223; sauer mit Basmatireis (ACG)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Spaghetti Bolognese (ACGL)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Orientalischer H&#252;hnereintopf mit Reis (GL)</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">&#160;</td>
+			<td valign="top">&#160;</td>
+			<td valign="top">&#160;</td>
+			<td valign="top">&#160;</td>
+			<td valign="top">&#160;</td>
+			<td valign="top">&#160;</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;">&#160;</td>
+			<td style="text-align: center;">&#160;</td>
+			<td style="text-align: center;">Salat</td>
+			<td style="text-align: center;">Salat</td>
+			<td style="text-align: center;">Salat</td>
+			<td style="text-align: center;">Salat</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;">Nachspeise</td>
+			<td style="text-align: center;">
+			<p>&#160;</p>
+
+			<p>&#160;</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Apfelkuchen</p>
+
+			<p>(ACG)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Griespudding mit Fr&#252;chten&#160;(AG)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Schoko-Nusskuchen (ACG)</p>
+			</td>
+			<td style="text-align: center;">
+			<p>Sachertorte&#160;(ACG)</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+</td></tr>
+<tr><td valign="top" width="120"></td><td width="10"> </td><td valign="top">
+<p><span class="aaigruen"><span new="" style="font-family:;" times=""><font color="#000000">A= glutenhaltiges Getreide, B= Krebstiere, C= Ei, D= Fisch, E= Erdnuss, F= Soja, G= Milch oder Laktose, </font></span><span new="" style="font-family:;" times=""><font color="#000000">H= Schalenfr&#252;chte,</font></span></span></p>
+
+<p><span class="aaigruen"><span new="" style="font-family:;" times=""><font color="#000000">L= Sellerie, M= Senf, N= Sesam, O= Sulfite, P= Lupinen, R=&#160;Weichtiere</font></span></span></p>
+
+<p>&#160;</p>
+
+<p>Es wird halal gekocht, mindestens ein Men&#252; ist immer vegetarisch.</p>
+
+<p>&#160;</p>
+
+<p>&#160;</p>
+
+<p><strong><u>&#214;ffnungszeiten:</u> Montag - Freitag 11:30 - 15:30 Uhr</strong></p>
+
+<p>&#160;</p>
+
+<p><u>Preise:</u></p>
+
+<p>Normales Men&#252;: &#8364; 5,90 (Suppe, Hauptspeise, Salat ODER Nachspeise und Geb&#228;ck)</p>
+
+<p>Komplettes Men&#252;: &#8364; 6,40 (Suppe, Hauptspeise, Salat UND Nachspeise und Geb&#228;ck)</p>
+
+<p>&#160;</p>
+
+<p><u>Kontakt: </u></p>
+
+<p>G&#246;khan Kaya</p>
+
+<p>Tel.: (+43) 699 / 18 17 51 44</p>
+
+<p>oder Tel.: (+43) 1 317 73 33<br />
+&#160;</p>
+
+<p><u>Kritiken:</u></p>
+
+<p>Standard vom 22.11.2010</p>
+
+<p>Leerer Bauch studiert nicht gern</p>
+
+<p>Viele, die am NIG oder am Campus studieren, verschl&#228;gt es oft und gerne in die Mensa des Afro-Asiatischen Instituts in der T&#252;rkenstra&#223;e. Die hat nicht nur ein gem&#252;tlicheres Flair, sondern auch gr&#246;&#223;ere Portionen als in der NIG-Mensa. Beim Ausprobieren der Kohlrabi-Medaillons mit Salzkartoffeln, wurde die Testerin mehr als satt, bei den gro&#223;en Portionen k&#246;nnten sich auch zwei Studenten einen Teller teilen.</p>
+
+<p>... Die AAI-Mensa ist bis 15:30 ge&#246;ffnet, wer zu sp&#228;t kommt, wird aber im caf&#233; afro nebenan ebenfalls gut verpflegt. Dort gibt es Tagespasta um 3,80, die Tagessuppe um 2,80 Euro und warme Toasts ab 2,70 Euro, gem&#252;tliche Atmosph&#228;re inklusive.<br />
+<br />
+Kurier vom 23.10.2011</p>
+
+<p>Orientalisch und frisch<br />
+Auch die Mensa im Afro-Asiatischen Institut trumpft mit Frische auf. &#34;Hier ist es g&#252;nstig und richtig gut&#34;, sagt Kunst-Studentin Nina K. Alt bekannte sowie orientalische Gerichte stehen auf dem Speiseplan. &#34;Das wichtigste ist, dass es frisch ist,&#34; sagt Wirt G&#246;khan Kaya. &#34;Und dass es schmeckt.&#34; Die Zucchini-Laibchen mit K&#228;se sind locker und aromatisch, die Getreide-Beilage leicht scharf gew&#252;rzt.<br />
+<br />
+<br />
+&#160;</p>
+
+<table class="mitrand">
+	<tbody>
+	</tbody>
+</table>
+
+</td></tr>
+</table></div>
+<!-- Layout Ende -->
+
+	</div><!-- maintext -->
+</div> <!-- sp3 -->
+	
+
+	
+</body>
+</html>
+"""
