@@ -7,7 +7,7 @@ from sqlalchemy import text
 import config
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://{user}:{password}@{host}/{db}?unix_socket=/var/run/mysqld/mysqld.sock".format(**config.db)
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://{user}:{password}@{host}/{db}?{settings}".format(**config.db)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -30,6 +30,7 @@ def handle_invalid_usage(error):
     })
     response.status_code = error.code
     return response
+
 
 @app.route('/api/venue/')
 def get_venues():
