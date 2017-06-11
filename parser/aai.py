@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 import config
 
-name = "aai"
+name = "AAI"
 
 fetch_url = "http://www.aai-wien.at/aai-mensa"
 
