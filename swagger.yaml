@@ -3,12 +3,11 @@ info:
   description: "get the daily menus of selected venues"
   version: "1.0.0"
   title: "Hunger API"
-  # termsOfService: "http://swagger.io/terms/"
   contact:
     email: "l.winkler23@mailbox.org"
-  # license:
-  #   name: "Apache 2.0"
-  #   url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+   license:
+     name: "The MIT License"
+     url: "https://opensource.org/licenses/MIT"
 externalDocs:
   description: "Github"
   url: "https://github.com/findus23/hunger"

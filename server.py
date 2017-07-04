@@ -1,6 +1,6 @@
 import logging
 
-from flask import Flask, jsonify, url_for, redirect, abort
+from flask import Flask, jsonify, url_for, redirect, abort, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
 
@@ -45,12 +45,10 @@ def get_venues():
 
 
 @app.route('/api/venue/<int:venueid>/')
-@app.route('/api/venue/<int:venueid>/<string:datetype>/')
-@app.route('/api/venue/<int:venueid>/<string:datetype>/<int:timeoffset>/')
-def get_meals(venueid, datetype="week", timeoffset=0):
-    if datetype == "week":
+def get_meals(venueid):
+    if request.args.get('mode', "week") == "week":
         sql_range = " AND YEARWEEK(date, 1) = YEARWEEK(CURDATE(), 1) + :offset"
-    elif datetype == "today":
+    elif request.args.get('mode') == "day":
         sql_range = " AND date=DATE_ADD(CURDATE(), INTERVAL :offset DAY) "
     else:
         return abort(400)
@@ -58,7 +56,9 @@ def get_meals(venueid, datetype="week", timeoffset=0):
 FROM menus
   JOIN meals ON meals.id = menus.meal
 WHERE venue = :venue"""
-    results = db.engine.execute(text(sql + sql_range), {"venue": venueid, "offset": timeoffset}).fetchall()
+    results = db.engine.execute(text(sql + sql_range),
+                                {"venue": venueid, "offset": request.args.get('offset', 0)}
+                                ).fetchall()
     menus = []
     for row in results:
         menu = dict(row)
