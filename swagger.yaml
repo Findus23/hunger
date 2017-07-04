@@ -5,9 +5,9 @@ info:
   title: "Hunger API"
   contact:
     email: "l.winkler23@mailbox.org"
-   license:
-     name: "The MIT License"
-     url: "https://opensource.org/licenses/MIT"
+  license:
+    name: "The MIT License"
+    url: "https://opensource.org/licenses/MIT"
 externalDocs:
   description: "Github"
   url: "https://github.com/findus23/hunger"
