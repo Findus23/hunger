@@ -1,0 +1,114 @@
+swagger: "2.0"
+info:
+  description: "get the daily menus of selected venues"
+  version: "1.0.0"
+  title: "Hunger API"
+  # termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "l.winkler23@mailbox.org"
+  # license:
+  #   name: "Apache 2.0"
+  #   url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+externalDocs:
+  description: "Github"
+  url: "https://github.com/findus23/hunger"
+host: "hunger.lw1.at"
+basePath: "/api"
+tags:
+- name: "pet"
+  description: "Everything about your Pets"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+- name: "store"
+  description: "Access to Petstore orders"
+- name: "user"
+  description: "Operations about user"
+  externalDocs:
+    description: "Find out more about our store"
+    url: "http://swagger.io"
+
+paths:
+
+  /venue/:
+    get:
+      tags:
+      - "venues"
+      summary: "get a list of all venues"
+      description: ""
+      operationId: "addPet"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: A User object
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: The venue id.
+                  example: 1
+                name:
+                  type: string
+                  description: The name of venue
+                  example: https://hunger.lw1.at/api/venue/1/
+                meals_url:
+                  type: string
+                  description: absolute URL to venue.
+                  example: Fladerei
+  /venue/{venueID}:
+    get:
+      tags:
+      - "menus"
+      summary: "get a list of all venues"
+      description: ""
+      produces:
+      - "application/json"
+      parameters:
+      - in: path
+        name: venueID
+        type: integer
+        required: true
+        description: ID of venue.
+      - in: query
+        name: mode
+        type: string
+        enum: 
+        - day
+        - week
+        description: either `day` to get menu of current day or `week` to get menu of current week.
+        default: day
+      - in: query
+        name: offset
+        type: integer
+        default: 0
+        description: get menu of future (positive) or previous (negative) week/day
+      responses:
+        400:
+          description: invalid parameters
+        200:
+          description: A User object
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                date:
+                  type: string
+                  description: ISO date format.
+                  example: "2017-07-03"
+                name:
+                  type: string
+                  description: The name of the meal
+                  example: "Speck, Jungzwiebel, Sauerrahm und Mozzarella überbacken"
+                description:
+                  type: string
+                  description: more details about the menu (can be empty).
+                  example: ""
+                venue:
+                  type: integer
+                  description: ID of venue
+                  example: 1
