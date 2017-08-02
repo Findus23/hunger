@@ -10,7 +10,7 @@ itsdangerous==0.24
 Jinja2==2.9.6
 MarkupSafe==1.0
 PyMySQL==0.7.11
-requests==2.18.2
+requests==2.18.3
 SQLAlchemy==1.1.11
 urllib3==1.22
 Werkzeug==0.12.2
