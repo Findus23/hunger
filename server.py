@@ -3,10 +3,12 @@ import logging
 from flask import Flask, jsonify, url_for, redirect, abort, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
-
+from raven.contrib.flask import Sentry
 import config
 
 app = Flask(__name__)
+if not config.DEBUG:
+    sentry = Sentry(app=app, dsn=config.sentry_url, logging=True, level=logging.ERROR)
 app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://{user}:{password}@{host}/{db}?{settings}".format(**config.db)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
