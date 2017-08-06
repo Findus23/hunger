@@ -1,8 +1,16 @@
 import pymysql.cursors
+from raven import Client
 
 import config
 import parser
 
+if not config.DEBUG:
+    client = Client(
+        dsn=config.sentry_url,
+        processors=(
+            'raven.processors.SanitizePasswordsProcessor',
+        )
+    )
 # Connect to the database
 connection = pymysql.connect(host=config.db["host"],
                              user=config.db["user"],
