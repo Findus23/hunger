@@ -27,7 +27,7 @@ def get_menus():
     tagesmenus = []
     soup = BeautifulSoup(fetch_recourse(), 'html.parser')
     hs_div = get_hauptsachen(soup)
-
+    print(hs_div)
     for day_p in hs_div.find_all("p", text=dateregex):
         datestring = dateregex.search(day_p.text).group(0)
         date = datetime.strptime(datestring, "%d.%m.%Y")
@@ -49,5 +49,5 @@ def get_menus():
 def get_hauptsachen(soup):
     divs = soup.findAll("div", {"class": "menue_box"})
     for div in divs:
-        if div.h2.text == "HAUPT SACHEN":
+        if div.h2.text == "HAUPT SACHEN" or div.h2.text == "HAUPTSACHEN":
             return div
