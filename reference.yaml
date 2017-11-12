@@ -1,0 +1,140 @@
+---
+Fladerei:
+  -
+    date: "2017-05-22T00:00:00"
+    name: "Putenschinken mit Kräuterrahm, Zwiebel, Mais und Käse überbacken"
+  -
+    date: "2017-05-23T00:00:00"
+    name: "\"Melanzane al forno\" - Melanzani in Tomatensauce und Mozzarella überbacken"
+  -
+    date: "2017-05-24T00:00:00"
+    name: "Prosciutto mit Rahm, Rucola und Parmesan"
+  -
+    date: "2017-05-25T00:00:00"
+    name: "Broccoli mit Rahm, Schinken und Käse überbacken"
+  -
+    date: "2017-05-26T00:00:00"
+    name: "\"Griechische Flade\" - Schafskäse mit Sauerrahm, Oliven, Paradeiser, Zwiebel und Oregano"
+  -
+    date: "2017-05-27T00:00:00"
+    name: "Eiaufstrich mit Paradeiser und Rucola"
+  -
+    date: "2017-05-28T00:00:00"
+    name: "\"Antipasti\" - Prosciutto mit Oliven, getrockneten Tomaten, Rahm, Rucola und Mozzarella"
+
+Zuppa:
+  -
+    date: "2017-06-08T00:00:00"
+    name: "GEFLÜGEL- SPARGEL-RAGOUT"
+  -
+    date: "2017-06-08T00:00:00"
+    name: "PINK PANTHER RISOTTO"
+  -
+    date: "2017-09-02T00:00:00"
+    name: "GEFÜLLTE OFENKARTOFFEL"
+  -
+    date: "2017-09-02T00:00:00"
+    name: "ORIENTALISCHER COUSCOUS MIT FETA"
+
+
+AAI:
+  -
+    date: 2017-06-05 00:00:00 +00:00
+    name: "SCHÖNEN FEIERTAG"
+    type: Suppe
+  -
+    date: 2017-06-05 00:00:00 +00:00
+    name: Minestrone
+    type: Suppe
+  -
+    date: 2017-06-05 00:00:00 +00:00
+    name: Broccolicremesuppe
+    type: Suppe
+  -
+    date: 2017-06-05 00:00:00 +00:00
+    name: Linsensuppe
+    type: Suppe
+  -
+    date: 2017-06-05 00:00:00 +00:00
+    name: Gemüsecremesuppe
+    type: Suppe
+  -
+    date: 2017-06-06 00:00:00 +00:00
+    name: "SCHÖNEN FEIERTAG"
+    type: Menü1
+  -
+    date: 2017-06-06 00:00:00 +00:00
+    name: "Hühnerspieß mit Pommes"
+    type: Menü1
+  -
+    date: 2017-06-06 00:00:00 +00:00
+    name: "Rindsgeschnetzeltes mit Nudeln"
+    type: Menü1
+  -
+    date: 2017-06-06 00:00:00 +00:00
+    name: "Wiener Schnitzel mit Erdäpfelsalat"
+    type: Menü1
+  -
+    date: 2017-06-06 00:00:00 +00:00
+    name: Fischteller
+    type: Menü1
+  -
+    date: 2017-06-07 00:00:00 +00:00
+    name: "SCHÖNEN FEIERTAG"
+    type: Menü2
+  -
+    date: 2017-06-07 00:00:00 +00:00
+    name: "Gemüselasagne mit Tomatensauce"
+    type: Menü2
+  -
+    date: 2017-06-07 00:00:00 +00:00
+    name: "Gebackener Camembert mit Preiselbeeren und Sauce Tartar"
+    type: Menü2
+  -
+    date: 2017-06-07 00:00:00 +00:00
+    name: "Broccolipfanne mit Basmatireis"
+    type: Menü2
+  -
+    date: 2017-06-07 00:00:00 +00:00
+    name: "Spinat-Mozzarella-Tascherl mit Salat und Joghurtsauce"
+    type: Menü2
+  -
+    date: 2017-06-08 00:00:00 +00:00
+    name: "SCHÖNEN FEIERTAG"
+    type: Menü3
+  -
+    date: 2017-06-08 00:00:00 +00:00
+    name: "Chili con carne mit Basmatireis"
+    type: Menü3
+  -
+    date: 2017-06-08 00:00:00 +00:00
+    name: "Huhn süß sauer mit Basmatireis"
+    type: Menü3
+  -
+    date: 2017-06-08 00:00:00 +00:00
+    name: "Spaghetti Bolognese"
+    type: Menü3
+  -
+    date: 2017-06-08 00:00:00 +00:00
+    name: "Orientalischer Hühnereintopf mit Reis"
+    type: Menü3
+  -
+    date: 2017-06-09 00:00:00 +00:00
+    name: ""
+    type: Nachspeise
+  -
+    date: 2017-06-09 00:00:00 +00:00
+    name: Apfelkuchen
+    type: Nachspeise
+  -
+    date: 2017-06-09 00:00:00 +00:00
+    name: "Griespudding mit Früchten"
+    type: Nachspeise
+  -
+    date: 2017-06-09 00:00:00 +00:00
+    name: Schoko-Nusskuchen
+    type: Nachspeise
+  -
+    date: 2017-06-09 00:00:00 +00:00
+    name: Sachertorte
+    type: Nachspeise
