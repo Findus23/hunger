@@ -27,7 +27,6 @@ def get_menus():
     tagesmenus = []
     soup = BeautifulSoup(fetch_recourse(), 'html.parser')
     hs_div = get_hauptsachen(soup)
-    print(hs_div)
     for day_p in hs_div.find_all("p", text=dateregex):
         datestring = dateregex.search(day_p.text).group(0)
         date = datetime.strptime(datestring, "%d.%m.%Y")
