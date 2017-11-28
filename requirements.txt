@@ -11,7 +11,7 @@ itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
 PyMySQL==0.7.11
-pytest==3.2.3
+pytest==3.3.0
 PyYAML==3.12
 raven==6.3.0
 requests==2.18.4
